@@ -1,11 +1,12 @@
-from service.models.base_model import BaseModel
-from domain.domain import DetectionResult
+from prediction.ml_models.base_model import BaseModel
+from prediction.models.domain import DetectionResult
 from ultralytics import YOLO
 from PIL import Image
-import numpy as np
+import os
 
 class YOLODetectionModel(BaseModel[Image.Image, list[DetectionResult]]):
-    def __init__(self, model_path: str = "artifacts/yolov5su.pt"):
+    def __init__(self, model_path: str = "../artifacts/yolov5su.pt"):
+        model_path = os.path.join(os.path.dirname(__file__), model_path)
         super().__init__(model_path)
 
     def _load_model(self):

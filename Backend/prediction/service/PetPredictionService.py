@@ -1,7 +1,7 @@
-from domain.domain import FullPredictionResult
-from service.models.classification import ResNet50ClassificationModel
-from service.models.detection import YOLODetectionModel
-from service.models.segmentation import DeepLabV3SegmentationModel
+from prediction.models.domain import FullPredictionResult
+from prediction.ml_models.classification import ResNet50ClassificationModel
+from prediction.ml_models.detection import YOLODetectionModel
+from prediction.ml_models.segmentation import DeepLabV3SegmentationModel
 from PIL import Image
 
 class PetPredictionService:

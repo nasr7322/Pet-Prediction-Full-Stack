@@ -1,13 +1,15 @@
-from service.models.base_model import BaseModel
-from domain.domain import SegmentationResult
+from prediction.ml_models.base_model import BaseModel
+from prediction.models.domain import SegmentationResult
 from torchvision.models.segmentation import deeplabv3_resnet50
 import torch
 from PIL import Image
+import os
 
 import torchvision.transforms as T
 
 class DeepLabV3SegmentationModel(BaseModel[Image.Image, SegmentationResult]):
-    def __init__(self, model_path: str = "artifacts/deeplabv3_resnet50.pth"):
+    def __init__(self, model_path: str = "../artifacts/deeplabv3_resnet50.pth"):
+        model_path = os.path.join(os.path.dirname(__file__), model_path)
         super().__init__(model_path)
 
     def _load_model(self):
