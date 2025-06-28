@@ -1,4 +1,4 @@
-from service.model_services.base_model import BaseModel
+from service.models.base_model import BaseModel
 from domain.domain import ClassificationResult
 import torch
 from torchvision.models import resnet50
@@ -9,7 +9,7 @@ import torchvision.transforms as T
 
 class ResNet50ClassificationModel(BaseModel[Image.Image, ClassificationResult]):
     
-    def __init__(self, model_path: str = "models/resnet50_imagenet.pth"):
+    def __init__(self, model_path: str = "artifacts/resnet50_imagenet.pth"):
         self.class_names = self._load_class_names()
         super().__init__(model_path)
 

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from domain.domain import FullResponse, ClassificationResult, DetectionResult, SegmentationResult
-from service.prediction import PetPredictionService
+from domain.domain import FullPredictionResult, ClassificationResult, DetectionResult, SegmentationResult
+from service.PetPredictionService import PetPredictionService
 from fastapi import File, UploadFile
 from io import BytesIO
 from PIL import Image
@@ -8,7 +8,7 @@ from PIL import Image
 pet_prediction_app = FastAPI()
 
 @pet_prediction_app.get("/predict-full")
-async def predict(file: UploadFile = File(...)) -> FullResponse:
+async def predict(file: UploadFile = File(...)) -> FullPredictionResult:
     contents = await file.read()
     image = Image.open(BytesIO(contents)).convert("RGB")
     return PetPredictionService().full_pet_prediction(image)

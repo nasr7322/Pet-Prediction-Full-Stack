@@ -1,7 +1,7 @@
-from domain.domain import FullResponse
-from service.model_services.classification import ResNet50ClassificationModel
-from service.model_services.detection import YOLODetectionModel
-from service.model_services.segmentation import DeepLabV3SegmentationModel
+from domain.domain import FullPredictionResult
+from service.models.classification import ResNet50ClassificationModel
+from service.models.detection import YOLODetectionModel
+from service.models.segmentation import DeepLabV3SegmentationModel
 from PIL import Image
 
 class PetPredictionService:
@@ -16,7 +16,7 @@ class PetPredictionService:
 
         # Check if classified as pet
         if not result_cls.is_pet:
-            return FullResponse(
+            return FullPredictionResult(
                 classification=result_cls,
                 detection=None,
                 segmentation=None
@@ -28,7 +28,7 @@ class PetPredictionService:
         # Segmentation
         result_seg = self.segmentation_model(image)
 
-        return FullResponse(
+        return FullPredictionResult(
             classification=result_cls,
             detection=results_det,
             segmentation=result_seg

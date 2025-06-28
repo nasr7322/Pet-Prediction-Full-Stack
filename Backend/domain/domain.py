@@ -15,7 +15,7 @@ class DetectionResult(BaseModel):
 class SegmentationResult(BaseModel):
     seg_mask: list[list[int]]
 
-class FullResponse(BaseModel):
+class FullPredictionResult(BaseModel):
     classification: ClassificationResult
     detection: list[DetectionResult]
     segmentation: SegmentationResult
