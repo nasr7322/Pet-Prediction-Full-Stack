@@ -1,0 +1,8 @@
+__pycache__
+#environment
+KLA
+
+#models
+deeplabv3_resnet50.pth
+resnet50_imagenet.pth
+yolov5su.pt
