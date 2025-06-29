@@ -1,5 +1,5 @@
 from prediction.ml_models.base_model import BaseModel
-from prediction.models.domain import DetectionResult
+from prediction.domain.domain import DetectionResult
 from ultralytics import YOLO
 from PIL import Image
 import os

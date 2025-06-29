@@ -1,6 +1,6 @@
 import os
 from prediction.ml_models.base_model import BaseModel
-from prediction.models.domain import ClassificationResult
+from prediction.domain.domain import ClassificationResult
 import torch
 from torchvision.models import resnet50
 import requests

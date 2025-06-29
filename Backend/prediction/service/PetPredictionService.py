@@ -1,4 +1,4 @@
-from prediction.models.domain import FullPredictionResult
+from prediction.domain.domain import FullPredictionResult
 from prediction.ml_models.classification import ResNet50ClassificationModel
 from prediction.ml_models.detection import YOLODetectionModel
 from prediction.ml_models.segmentation import DeepLabV3SegmentationModel

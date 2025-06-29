@@ -1,5 +1,5 @@
 from prediction.ml_models.base_model import BaseModel
-from prediction.models.domain import SegmentationResult
+from prediction.domain.domain import SegmentationResult
 from torchvision.models.segmentation import deeplabv3_resnet50
 import torch
 from PIL import Image
