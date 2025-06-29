@@ -23,7 +23,7 @@ async def predict_full(
     image = Image.open(BytesIO(contents)).convert("RGB")
     return PetPredictionService().full_pet_prediction(image)
 
-@router.post("/predict/classification", response_model=ClassificationResult)
+@router.post("/classification", response_model=ClassificationResult)
 async def predict_classification(
     file: UploadFile = File(...),
     token: str = Depends(oauth2_scheme),
@@ -34,7 +34,7 @@ async def predict_classification(
     image = Image.open(BytesIO(contents)).convert("RGB")
     return PetPredictionService().classify(image)
 
-@router.post("/predict/detection", response_model=list[DetectionResult])
+@router.post("/detection", response_model=list[DetectionResult])
 async def predict_detection(
     file: UploadFile = File(...),
     token: str = Depends(oauth2_scheme),
@@ -45,7 +45,7 @@ async def predict_detection(
     image = Image.open(BytesIO(contents)).convert("RGB")
     return PetPredictionService().detect(image)
 
-@router.post("/predict/segmentation", response_model=SegmentationResult)
+@router.post("/segmentation", response_model=SegmentationResult)
 async def predict_segmentation(
     file: UploadFile = File(...),
     token: str = Depends(oauth2_scheme),

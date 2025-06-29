@@ -8,4 +8,4 @@ pet_prediction_app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
 pet_prediction_app.include_router(auth_router, prefix="/api/auth")
-pet_prediction_app.include_router(router, prefix="/api/prediction")
+pet_prediction_app.include_router(router, prefix="/api/predict")
