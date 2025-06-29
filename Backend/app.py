@@ -1,14 +1,11 @@
 from fastapi import FastAPI
-from domain.domain import FullResponce
-from service.prediction import PetPredictionService
-from fastapi import File, UploadFile
-from io import BytesIO
-from PIL import Image
+from prediction.controller.endpoints import router
+from auth.controller.endpoints import router as auth_router
+from database import Base, engine
+
 
 pet_prediction_app = FastAPI()
+Base.metadata.create_all(bind=engine)
 
-@pet_prediction_app.get("/predict")
-async def predict(file: UploadFile = File(...)) -> FullResponce:
-    contents = await file.read()
-    image = Image.open(BytesIO(contents)).convert("RGB")
-    return PetPredictionService().full_pet_prediction(image)
+pet_prediction_app.include_router(auth_router, prefix="/api/auth")
+pet_prediction_app.include_router(router, prefix="/api/predict")
