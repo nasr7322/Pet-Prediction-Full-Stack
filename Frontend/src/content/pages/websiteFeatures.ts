@@ -1,3 +1,5 @@
+const IMAGES_URL = import.meta.env.VITE_IMAGES_URL;
+
 export const websiteFeaturesContent = {
   hero: {
     title: "AI Pet Detection",
@@ -11,8 +13,8 @@ export const websiteFeaturesContent = {
       description: 'Upload an image and our AI will instantly determine if it contains a pet and identify the type of animal.',
       gradient: 'from-cyan-500 to-blue-600',
       examples: [
-        'https://ibb.co/hJZcpzMX',
-        'https://ibb.co/XrXbKSZy'
+        IMAGES_URL+'C0.webp',
+        IMAGES_URL+'C1.webp'
       ],
     },
     {
@@ -20,8 +22,8 @@ export const websiteFeaturesContent = {
       description: 'Locate and highlight pets in your images with precise bounding boxes showing their exact positions.',
       gradient: 'from-green-500 to-teal-600',
       examples: [
-        'https://ibb.co/Rk466Tx6',
-        'https://ibb.co/d0qPbV88'
+        IMAGES_URL+'D0.webp',
+        IMAGES_URL+'D1.webp'
       ],
     },
     {
@@ -29,8 +31,8 @@ export const websiteFeaturesContent = {
       description: 'Create pixel-perfect masks that separate pets from the background for advanced image editing.',
       gradient: 'from-purple-500 to-pink-600',
       examples: [
-        'https://ibb.co/Kpv8ZWFn',
-        'https://ibb.co/fdQ5SHpb'
+        IMAGES_URL+'S0.webp',
+        IMAGES_URL+'S1.webp'
       ],
     },
   ],

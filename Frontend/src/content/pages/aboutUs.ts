@@ -1,3 +1,5 @@
+const IMAGES_URL = import.meta.env.VITE_IMAGES_URL;
+
 export const aboutUsContent = {
   hero: {
     title: "Knights Lab",
@@ -69,15 +71,15 @@ export const aboutUsContent = {
   },
   carouselImages: [
     {
-      src: 'https://ibb.co/kVRBMTkZ',
+      src: IMAGES_URL+'1.webp',
       alt: 'Research Team',
     },
     {
-      src: 'https://ibb.co/WjqCQrW',
+      src: IMAGES_URL+'2.webp',
       alt: 'AI Development',
     },
     {
-      src: 'https://ibb.co/d49j1H7m',
+      src: IMAGES_URL+'3.webp',
       alt: 'Team Collaboration',
     },
   ]
