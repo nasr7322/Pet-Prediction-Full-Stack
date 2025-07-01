@@ -190,7 +190,7 @@ Pet Prediction Full Stack/
 
 1. **Registration**: Create an account or sign in
 2. **Upload Image**: Select or drag-and-drop a pet image
-3. **Choose Analysis**: 
+3. **Choose Analysis**:
    - **Classify** to identify if the image contains a pet
    - **Detect** to locate pets with bounding boxes (requires pet classification first)
    - **Segment** to create pixel-perfect masks (requires pet classification first)
@@ -224,19 +224,11 @@ Pet Prediction Full Stack/
 ## 🚀 Deployment
 
 The application is configured for deployment on platforms like:
-- **Frontend**: Vercel, Netlify, or similar static hosting
-- **Backend**: Heroku, Railway, or cloud platforms with Python support
-- **Database**: PostgreSQL on cloud providers
+- **Frontend**: Vercel
+- **Backend**: Huggingface
+- **Database**: PostgreSQL on Supabase
 
 Environment variables need to be configured for production deployment.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
