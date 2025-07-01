@@ -13,7 +13,7 @@ export const websiteFeaturesContent = {
       description: 'Upload an image and our AI will instantly determine if it contains a pet and identify the type of animal.',
       gradient: 'from-cyan-500 to-blue-600',
       examples: [
-        IMAGES_URL+'C0.webp',
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/C0.webp',
         IMAGES_URL+'C1.webp'
       ],
     },
