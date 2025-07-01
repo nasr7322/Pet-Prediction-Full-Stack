@@ -11,7 +11,7 @@ export const aboutUsContent = {
       content: "We develop cutting-edge AI technologies to solve real-world problems, focusing on computer vision and pet detection systems."
     },
     {
-      title: "Research Focus", 
+      title: "Research Focus",
       content: "Our team specializes in deep learning and advanced image processing, pushing the boundaries of AI-powered analysis."
     },
     {
@@ -71,15 +71,15 @@ export const aboutUsContent = {
   },
   carouselImages: [
     {
-      src: IMAGES_URL+'1.webp',
+      src: 'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/1.webp',
       alt: 'Research Team',
     },
     {
-      src: IMAGES_URL+'2.webp',
+      src: 'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/2.webp',
       alt: 'AI Development',
     },
     {
-      src: IMAGES_URL+'3.webp',
+      src: 'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/3.webp',
       alt: 'Team Collaboration',
     },
   ]

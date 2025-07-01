@@ -14,7 +14,7 @@ export const websiteFeaturesContent = {
       gradient: 'from-cyan-500 to-blue-600',
       examples: [
         'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/C0.webp',
-        IMAGES_URL+'C1.webp'
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/C1.webp',
       ],
     },
     {
@@ -22,8 +22,8 @@ export const websiteFeaturesContent = {
       description: 'Locate and highlight pets in your images with precise bounding boxes showing their exact positions.',
       gradient: 'from-green-500 to-teal-600',
       examples: [
-        IMAGES_URL+'D0.webp',
-        IMAGES_URL+'D1.webp'
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/D0.webp',
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/D1.webp'
       ],
     },
     {
@@ -31,8 +31,8 @@ export const websiteFeaturesContent = {
       description: 'Create pixel-perfect masks that separate pets from the background for advanced image editing.',
       gradient: 'from-purple-500 to-pink-600',
       examples: [
-        IMAGES_URL+'S0.webp',
-        IMAGES_URL+'S1.webp'
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/S0.webp',
+        'https://raw.githubusercontent.com/nasr7322/Pet-Prediction-Full-Stack/refs/heads/main/Frontend/src/assets/S1.webp'
       ],
     },
   ],
