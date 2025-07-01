@@ -69,15 +69,15 @@ export const aboutUsContent = {
   },
   carouselImages: [
     {
-      src: '/src/assets/1.webp',
+      src: 'https://ibb.co/kVRBMTkZ',
       alt: 'Research Team',
     },
     {
-      src: '/src/assets/2.webp',
+      src: 'https://ibb.co/WjqCQrW',
       alt: 'AI Development',
     },
     {
-      src: '/src/assets/3.webp',
+      src: 'https://ibb.co/d49j1H7m',
       alt: 'Team Collaboration',
     },
   ]

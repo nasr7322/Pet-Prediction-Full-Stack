@@ -11,8 +11,8 @@ export const websiteFeaturesContent = {
       description: 'Upload an image and our AI will instantly determine if it contains a pet and identify the type of animal.',
       gradient: 'from-cyan-500 to-blue-600',
       examples: [
-        '/src/assets/C0.webp',
-        '/src/assets/C1.webp'
+        'https://ibb.co/hJZcpzMX',
+        'https://ibb.co/XrXbKSZy'
       ],
     },
     {
@@ -20,8 +20,8 @@ export const websiteFeaturesContent = {
       description: 'Locate and highlight pets in your images with precise bounding boxes showing their exact positions.',
       gradient: 'from-green-500 to-teal-600',
       examples: [
-        '/src/assets/D0.webp',
-        '/src/assets/D1.webp'
+        'https://ibb.co/Rk466Tx6',
+        'https://ibb.co/d0qPbV88'
       ],
     },
     {
@@ -29,8 +29,8 @@ export const websiteFeaturesContent = {
       description: 'Create pixel-perfect masks that separate pets from the background for advanced image editing.',
       gradient: 'from-purple-500 to-pink-600',
       examples: [
-        '/src/assets/S0.webp',
-        '/src/assets/S1.webp'
+        'https://ibb.co/Kpv8ZWFn',
+        'https://ibb.co/fdQ5SHpb'
       ],
     },
   ],
