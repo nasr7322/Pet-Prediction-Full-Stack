@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Futuristic Theme */
+:root {
+  /* Background Colors */
+  --bg-primary: #012239;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-glass-hover: rgba(255, 255, 255, 0.06);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  /* Border Colors */
+  --border-primary: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  
+  /* Accent Colors */
+  --accent-cyan: #06b6d4;
+  --accent-blue: #3b82f6;
+  --accent-green: #22c55e;
+  --accent-purple: #a855f7;
+  --accent-pink: #ec4899;
+  --accent-red: #ef4444;
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .bg-app-primary {
+    background-color: var(--bg-primary);
+  }
+  
+  .bg-app-secondary {
+    background-color: var(--bg-secondary);
+  }
+  
+  .bg-app-tertiary {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .bg-app-glass {
+    background-color: var(--bg-glass);
+  }
+  
+  .bg-app-glass-hover:hover {
+    background-color: var(--bg-glass-hover);
+  }
+  
+  .border-app {
+    border-color: var(--border-primary);
+  }
+  
+  .border-app-hover:hover {
+    border-color: var(--border-hover);
+  }
+  
+  .text-app-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-app-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .text-app-tertiary {
+    color: var(--text-tertiary);
+  }
+  
+  .text-app-muted {
+    color: var(--text-muted);
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  }
+  
+  .gradient-primary-hover:hover {
+    background: linear-gradient(135deg, #0891b2, #2563eb);
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--bg-primary), #0a0a0a, var(--bg-secondary));
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}

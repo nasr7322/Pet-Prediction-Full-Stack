@@ -8,8 +8,8 @@ router = APIRouter()
 
 @router.post("/signup")
 def signup(user: UserCreate, db: Session = Depends(get_db)):
-    return signup_user(user.email, user.password, db)
+    return signup_user(user, db)
 
 @router.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):
-    return login_user(user.email, user.password, db)
+    return login_user(user, db)

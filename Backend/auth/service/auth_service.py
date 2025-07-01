@@ -1,29 +1,32 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from models import user as user_model
+from auth.domain.user_domain import AuthResponse, User, UserCreate, UserLogin
 import auth.auth_utils as auth_utils
 
-def signup_user(email: str, password: str, db: Session):
-    db_user = db.query(user_model.User).filter(user_model.User.email == email).first()
+def signup_user(user: UserCreate, db: Session)->AuthResponse:
+    db_user = db.query(user_model.User).filter(user_model.User.email == user.email).first()
     if db_user:
         raise HTTPException(status_code=400, detail="Email already registered")
-    
-    hashed_pw = auth_utils.hash_password(password)
-    new_user = user_model.User(email=email, hashed_password=hashed_pw)
+
+    hashed_pw = auth_utils.hash_password(user.password)
+    new_user = user_model.User(email=user.email, hashed_password=hashed_pw, name=user.name)
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
     
     token = auth_utils.create_access_token({"sub": new_user.email})
-    return token
+    new_user_response = User(id=new_user.id, email=new_user.email, name=new_user.name)
+    return AuthResponse(access_token=token, user=new_user_response)
 
-def login_user(email: str, password: str, db: Session):
-    db_user = db.query(user_model.User).filter(user_model.User.email == email).first()
-    if not db_user or not auth_utils.verify_password(password, db_user.hashed_password):
+def login_user(user: UserLogin, db: Session)->AuthResponse:
+    db_user = db.query(user_model.User).filter(user_model.User.email == user.email).first()
+    if not db_user or not auth_utils.verify_password(user.password, db_user.hashed_password):
         raise HTTPException(status_code=401, detail="Invalid credentials")
     
     token = auth_utils.create_access_token({"sub": db_user.email})
-    return token
+    user_response = User(id=db_user.id, email=db_user.email, name=db_user.name)
+    return AuthResponse(access_token=token, user=user_response)
 
 def auth(token: str, db: Session):
     payload = auth_utils.decode_access_token(token)

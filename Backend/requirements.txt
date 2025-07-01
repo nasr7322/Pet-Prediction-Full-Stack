@@ -10,7 +10,8 @@ python-multipart
 sqlalchemy
 alembic
 psycopg2-binary
-passlib[bcrypt]
+bcrypt==4.0.1
+passlib[bcrypt]==1.7.4
 python-jose
 pydantic
 python-dotenv
